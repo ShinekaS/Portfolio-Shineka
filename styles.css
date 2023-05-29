@@ -138,13 +138,13 @@ width: 50%;
 }
 /* --Portfolio section-- */
 #portfolio {
-padding: 50px 0;
+padding: 10px;
 
 }
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(475px, 1fr));
+    grid-gap: 50px;
     margin-top: 50px;
 }
 .work {
@@ -162,6 +162,9 @@ padding: 50px 0;
     transform: scale(1.1);
 }
 /* ---contact--------- */
+#contact {
+    margin-top: 200px;
+}
 .contact-left {
     flex-basis: 35%;
 }
