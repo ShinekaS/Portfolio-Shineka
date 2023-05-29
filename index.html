@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="images/shineka-high-resolution-logo-color-on-transparent-background.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Resume</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- <i class="fa-regular fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                    <i class="fa-regular fa-bars" onclick="openmenu()" ></i> -->
             </nav>
             <div class="header-text">
                 <p>Software Developer</p>
@@ -50,20 +52,20 @@
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>JavaScript</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>HTML</span><br>Web app Development</li>
+                            <li><span>Node.js</span><br>Web app Development</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Experience</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Experience</span><br>DigitalCrafts</li>
+                            <!-- <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Web Development</span><br>Web app Development</li> -->
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Education</span><br>Web app Development</li>
+                            <li><span>Education</span><br>DigitalCrafts Bootcamp Training</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                             <li><span>Web Development</span><br>Web app Development</li>
                         </ul>
@@ -90,6 +92,18 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
+
+    <!-- --Nav section functionality-- -->
+    <!-- <script>
+        const sidemenu = document.getElementById('sidemenu');
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script> -->
+<!-- --Nav section functionality ends-- -->
 
     <!-- Portfolio Section -->
     <div id="portfolio">
@@ -168,12 +182,13 @@
                     <button><a href="#" download class="btn btn2">Download Resume</a></button>
                 </div>
                 <div class="contact-right">
-                    <form action="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your email address" required>
+                        <input type="email" name="Email" placeholder="Your email address" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2" >Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -183,5 +198,24 @@
         </div>
     </div>
     <!-- Contact Me section ends -->
+    <!-- --Contact Me form-- -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7PjocyBQG6wMiLxvl9lkFz8h4ov5zqSjOKkLoJt7710pebfLMeQLVO0-KSgbdSY3t4Q/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
