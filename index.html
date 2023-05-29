@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
+    <title>Shineka's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -71,10 +72,11 @@
             </div>
         </div>
     </div>
-    <!-- ----About section ends---- -->
+    <!-- About section ends -->
+
     <script>
         const tablinks = document.getElementsByClassName("tab-links");
-        const tabcontent = document.getElementsByClassName("tab-contents");
+        const tabcontents = document.getElementsByClassName("tab-contents");
 
         function opentab(tabname) {
             for (tablink of tablinks) {
@@ -84,18 +86,12 @@
             for (tabcontent of tabcontents) {
                 tabcontent.classList.remove("active-tab");
             }
-            event.currentTarget.classList.add("active-links");
+            event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
 
-
-
-
-
-
-
-    <!-- ---Portfolio--- -->
+    <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
             <h1 class="sub-title">My Work</h1>
@@ -105,10 +101,10 @@
                     <div class="layer">
                         <h3>Buck-It List!</h3>
                         <p>Buck-It List! was my first team project and my first project fetching from a
-                            Public API. I've worked in team enviroments many times before, but learning
+                            Public API. I've worked in team environments many times before, but learning
                             to work as a part of a team, taking coding different area, while learning
-                            and respecting other members coding styles was a very new experience. All
-                            three team members very pleased with this experience and the worked that we
+                            and respecting other members' coding styles was a very new experience. All
+                            three team members were pleased with this experience and the work that we
                             produced.</p>
                         <a href="https://shinekas.github.io/JSI-Project/">https://shinekas.github.io/JSI-Project/</a>
                     </div>
@@ -118,8 +114,8 @@
                     <div class="layer">
                         <h3>Clean & Green</h3>
                         <p>Clean & Green was done as a team project assignment for class. In doing this
-                            project we learned the value of User stories. The three members of the team
-                            worked as a unit to make decisions, plan, code and style. We reached out MVP
+                            project, we learned the value of User stories. The three members of the team
+                            worked as a unit to make decisions, plan, code, and style. We reached our MVP
                             goals with hopes to return to work on stretch goals.</p>
                         <a href="https://clean-and-green.onrender.com/">https://clean-and-green.onrender.com/</a>
                     </div>
@@ -128,11 +124,11 @@
                     <img src="images/Pet Place.jpg" alt="The Pet Place">
                     <div class="layer">
                         <h3>Pet Place</h3>
-                        <p>The Pet Place project was a two part project. First we learned to build our
+                        <p>The Pet Place project was a two-part project. First, we learned to build our
                             own APIs. We then traded our APIs with other classmates with the
-                            instructions to build a front end around the other student's API. I received
-                            a very limited API but with it, I designed, The Pet Place, which in theory
-                            is a Pet rental service. Perhaps it would be used for terminally ill
+                            instructions to build a frontend around the other student's API. I received
+                            a very limited API but with it, I designed The Pet Place, which in theory
+                            is a pet rental service. Perhaps it would be used for terminally ill
                             patients needing uplifting furry companionship.</p>
                         <a href="https://shinekas.github.io/gfAPI/">https://shinekas.github.io/gfAPI/</a>
                     </div>
@@ -142,20 +138,50 @@
                     <div class="layer">
                         <h3>Plant Life!</h3>
                         <p>Plant Life is a React structured project done as a solo project for class.
-                            The goal was to return data from a Public API. This project is deployed on
-                            Render.com and may take a fw minutes to load.</p>
+                            The goal was to retrieve data from a Public API. This project is deployed on
+                            Render.com and may take a few minutes to load.</p>
                         <a href="https://plant-life.onrender.com">https://plant-life.onrender.com</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Portfolio section ends -->
 
+    <!-- Contact Me Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-regular fa-envelope"></i> neka.solomon@gmail.com</p></i>
+                    <p> <i class="fa-thin fa-phone"></i> (470) 469-1190</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/shineka-s-766a1b24a/">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ShinekaS">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    <!-- --This will be moved to the Resume section-- -->
+                    <button><a href="#" download class="btn btn2">Download Resume</a></button>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email address" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2" >Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" >
+            <p>Copyright © Shineka Solomon 2023</p>
+
+        </div>
     </div>
-
-
-
-
+    <!-- Contact Me section ends -->
 </body>
-
 </html>
