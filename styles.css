@@ -164,6 +164,7 @@ padding: 10px;
 /* ---contact--------- */
 #contact {
     margin-top: 200px;
+    font-size: large;
 }
 .contact-left {
     flex-basis: 35%;
@@ -186,17 +187,25 @@ padding: 10px;
     text-decoration: none;
     font-size: 30px;
     margin-top: 15px;
+    margin-bottom: 55px;
     color: #ababab;
     display: inline-block;
     transition: transform 0.5s;
+    padding: 10px;
 }
 .social-icons a:hover {
     color: #bd7fef;
     transform: translateY(-5px);
 }
+/* --Download button-- */
 .btn.btn2 {
     display: inline-block;
     background: #bd7fef;
+    color: #080808;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10%;
+    
 }
 .contact-right form {
     width: 100%;

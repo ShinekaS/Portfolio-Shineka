@@ -18,7 +18,7 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="images/'SSolomon Resume 2023 SE052023-PDF.pdf">Resume</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <!-- <i class="fa-regular fa-xmark" onclick="closemenu()"></i>
@@ -41,33 +41,30 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam nesciunt, minima inventore veniam
-                        quaerat, sed rem deleniti vitae sit soluta nemo, rerum sunt totam labore quasi. Ipsam deserunt
-                        voluptatibus pariatur!</p>
+                    <p>Greetings, my name is Shineka Solomon, I go by Inek and I am new to the world of Web Coding. I
+                        previously had a backgroud in IT, and always wanted to learn about becoming a Software Engineer,
+                        but didn't know where to begin and didn't have the time. I'm happy to say that I've finally made
+                        the time and with the help of DigitalCrafts, I've been able to obtain the nessecary skills
+                        required. </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>JavaScript</span><br>Web app Development</li>
-                            <li><span>HTML</span><br>Web app Development</li>
-                            <li><span>Node.js</span><br>Web app Development</li>
+                            <li><span>Frontend Web Development</span><br>JavaScript, HTML, CSS</li>
+                            <li><span>Backend Development</span><br>Node.js, Sequelize, Knex.js</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>Experience</span><br>DigitalCrafts</li>
-                            <!-- <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li> -->
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Education</span><br>DigitalCrafts Bootcamp Training</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Education</span><br>DigitalCrafts Web Coding Bootcamp</li>
                         </ul>
                     </div>
                 </div>
@@ -103,7 +100,7 @@
             sidemenu.style.right ="-200px";
         }
     </script> -->
-<!-- --Nav section functionality ends-- -->
+    <!-- --Nav section functionality ends-- -->
 
     <!-- Portfolio Section -->
     <div id="portfolio">
@@ -168,8 +165,8 @@
             <div class="row">
                 <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-sharp fa-regular fa-envelope"></i> neka.solomon@gmail.com</p></i>
-                    <p> <i class="fa-thin fa-phone"></i> (470) 469-1190</p>
+                    <p>📧 neka.solomon@gmail.com</p>
+                    <p> ☏ (470) 469-1190</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/shineka-s-766a1b24a/">
                             <i class="fab fa-linkedin"></i>
@@ -179,20 +176,20 @@
                         </a>
                     </div>
                     <!-- --This will be moved to the Resume section-- -->
-                    <button><a href="images/'SSolomon Resume 2023 SE052023-PDF.pdf" download class="btn btn2">Download Resume</a></button>
+                    <!-- <button><a href="images/'SSolomon Resume 2023 SE052023-PDF.pdf" download class="btn btn2">Download Resume</a></button> -->
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your email address" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2" >Submit</button>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
                     <span id="msg"></span>
                 </div>
             </div>
         </div>
-        <div class="copyright" >
+        <div class="copyright">
             <p>Copyright © Shineka Solomon 2023</p>
 
         </div>
@@ -203,19 +200,20 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx7PjocyBQG6wMiLxvl9lkFz8h4ov5zqSjOKkLoJt7710pebfLMeQLVO0-KSgbdSY3t4Q/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
 </body>
+
 </html>
